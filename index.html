@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--Bootstrap CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!--CSS File-->
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<!--Font-->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+	<!--Post Card-->
+	<div class="card">
+		<div class="row upper">
+
+			<!--Post Image-->
+			<div class="col-lg-3">
+				<div class="image">
+					<img src="itachi.png">
+				</div>
+			</div>
+
+			<!--Post Author Info and Ratings-->
+			<div class="col-lg-3">
+				<div class="info">
+
+					 <div class="row name">
+					 	<p><i class="fas fa-user-circle"></i><strong>Uchiha Itachi</strong></p>
+					 </div>
+
+					 <div class="row address">
+					 	<p><i class="fas fa-map-marker-alt"></i>Konohagakure</p>
+					 </div>
+
+					 <div class="row lower">
+					 	Raiting:  
+					 	<div class="stars-outer">
+						  <div class="stars-inner"></div>
+						</div>
+					 </div>
+
+					 <div class="row lower">
+					 	<span>
+					 		<a href="">Reviews: 50</a>
+					 	</span>
+					 	<div class="col-md-1"></div>
+					 	<span>
+					 		<a href="">Quetions</a>
+					 	</span>
+					 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<!--Post Body-->
+		<div class="row text">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+
+		<hr>
+
+		<!--Like and Share Buttons-->
+		<div class="btn-container">
+		 	<div class="btn">
+		 		<button onCLick="toggleLike()" class="btn btn-primary"><i id="sym" class="far fa-thumbs-up"></i><span id="text"> Like</span></button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Share!</button>
+		 	</div>
+		</div>
+
+
+		<!--Modal HTML-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Enter Email-id</h5>
+		        <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+
+		      <!--Modal Body-->
+		      <div class="modal-body container">
+
+		      	<!--Alert Body-->
+		      	<div id="alert" class="alert alert-success" role="alert">
+				  Sent Successfully!
+				</div>
+
+				<!--Email Input Field-->
+		        <form>
+		        	<div id="input">
+		        		<div class="row" id="row1">
+		        			<div class="col-md-10">
+		        				<input class="input-group-text" type="email" name="box1" id="box1">
+		        			</div>
+		        			<div class="col-md-2">
+		        				<button type="button" onClick="tabClose(this)" class="close" id="close1">
+						          &times;
+						        </button>
+		        			</div>
+		        		</div>
+		        		<br id="break1">
+		        	</div>
+
+		        	<!--Add Button-->
+		        	<button type="button" class="btn btn-success btn-sm" onClick="add()">Add</button>
+		        </form>
+
+		      </div>
+
+		      <!--Cancel and Send Button in Modal-->
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" onClick="send()">Share</button>
+		      </div>
+
+		    </div>
+		  </div>
+		</div>
+
+	</div>
+</div>
+
+
+<!--Bootstarp jQ and JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!--FontAwesome-->
+<script src="https://kit.fontawesome.com/e53a119c12.js" crossorigin="anonymous"></script>
+
+<!--JavaScript file-->
+<script src="index.js"></script>
+
+</body>
+</html>
